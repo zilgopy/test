@@ -1,6 +1,8 @@
 pipeline {
   agent {
-    docker { image 'centos:latest'}
+    docker { image 'centos:latest'
+    label 'go'
+}
     }
   tools {
    go 'go1.16.3'
