@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('a') {
+    stage('build') {
       steps {
-        build(job: 'Gradle', propagate: true, wait: true)
+        sh 'go build main/hello.go'
       }
     }
 
