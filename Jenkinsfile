@@ -10,14 +10,14 @@ pipeline {
   }
   stages {
     stage('build') {
-      steps {
-      input {
+       input {
         message "should we continue?"
         ok "Yes,we should."
                 parameters {
                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
-      }
+      }   
+      steps {
       echo "${params.Greeting}"
       echo "$params.Greeting"
       echo "$PERSON"
