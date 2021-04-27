@@ -13,6 +13,9 @@ pipeline {
         echo "$env2_USR"
         sh 'printenv'
         sh 'echo $env2 > ~/.env2 && cat ~/.env2'
+        withCredentials([string(credentialsId: 'secret1', variable: 'abc')]) {
+          echo $abc
+        }
       }
     }
 
