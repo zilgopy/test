@@ -1,4 +1,3 @@
-def abc = credentials('4a267696-db61-4f76-8d21-88b38f7a38fe')
 pipeline {
   agent any
   environment {
@@ -12,9 +11,8 @@ pipeline {
         echo "$env2"
         echo "$env2_PSW"
         echo "$env2_USR"
-        echo "$abc"
-        echo "$abc_PSW"
         sh 'printenv'
+        sh 'echo $env2 > ~/.env2 && cat ~/.env2'
       }
     }
 
