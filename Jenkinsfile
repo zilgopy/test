@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  environments{
+  environment {
   env1 = credentials('secret1')
   env2 = credentials('4a267696-db61-4f76-8d21-88b38f7a38fe')
   }
