@@ -1,3 +1,4 @@
+def xxx = 'I love hope'
 pipeline {
   agent any
   environment {
@@ -11,6 +12,7 @@ pipeline {
         echo "$env2"
         echo "$env2_PSW"
         echo "$env2_USR"
+        echo "$xxx"
         sh 'printenv'
         sh 'echo $env2 > ~/.env2 && cat ~/.env2'
         withCredentials([string(credentialsId: 'secret1', variable: 'abc')]) {
