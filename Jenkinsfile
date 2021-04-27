@@ -9,6 +9,9 @@ pipeline {
     stage('build') {
       steps {
         echo "$env1"
+        echo '$env1'
+        sh 'echo $env1'
+        sh('echo $env1')
         echo "$env2"
         echo "$env2_PSW"
         echo "$env2_USR"
